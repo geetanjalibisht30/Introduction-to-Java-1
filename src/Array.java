@@ -1,26 +1,39 @@
 import java.util.Scanner;
 
 public class Array {
-    int a[][] = new int[3][4];
+    int[][]a= {{1,2,3},{4,5,6},{7,8,9}};
 
 
-    void getdata() {
-        Scanner obj = new Scanner(System.in);
-        for(int i=0; i>3; i++ ){
-            for(int j=0; j>4; j++){
-            System.out.println("Enter the Number - ");
-            a[i][j] =obj.nextInt();
+
+
+    void row() {
+        for (int i = 0; i < 3; i++) {
+            int sum =0;
+            for (int j = 0; j < 3; j++) {
+                sum += a[i][j];
+
             }
+            System.out.println("sum of all element of row " + i + " : " +sum);
         }
-
-
     }
 
 
-    public static void main(String args[]){
+    void col() {
+        for (int i = 0; i < 3; i++) {
+            int sum =0;
+            for (int j = 0; j < 3; j++) {
+                sum += a[j][i];
 
+            }
+            System.out.println("sum of all element of column " + i + " : " + sum);
+        }
     }
 
-
-
+    public static void main(String[] args) {
+    Array obj = new Array();
+    obj.row();
+    obj.col();
+    }
 }
+
+
