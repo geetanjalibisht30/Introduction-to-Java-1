@@ -1,5 +1,4 @@
-//import javax.naming.InsufficientResourcesException;
-import javax.naming.InsufficientResourcesException;
+
 import  java.util.*;
 import  java.io.*;
 import java.time.format.DateTimeFormatter;
@@ -61,19 +60,18 @@ public class Boi implements Bank {
         System.out.println("Enter Interest Rate :");
         setRate(obj.nextFloat());
 
-        System.out.println("Press 1 : CURRENT A/C \N Press 2 : SAVING A/C");
+        System.out.println("Press 1 : CURRENT A/C N Press 2 : SAVING A/C");
         int ch = obj.nextInt();
-        if(ch == 1){
+        if (ch == 1) {
             acc = account_type.CURRENT;
-        }  System.out.println("Account Number : " + getAccount_number());
-        System.out.println(" First Name :" + getFirstName());
-        System.out.println("Last Name :"+ getLastName());
-        System.out.println("Amount  :" + getAmount());
-        System.out.println("Rate   :" + getRate());
-        System.out.println("Amount type   :" +  acc);
-        else {
+        }
+
+
+    else {
             acc = account_type.SAVING;
         }
+
+
 
     }
 
@@ -130,7 +128,7 @@ public class Boi implements Bank {
         try {
             obj.transfer_money();
         }
-        catch (InsufficientResourcesException e){
+        catch (InsufficientAmountException e){
             System.out.println(e);
         }
     }

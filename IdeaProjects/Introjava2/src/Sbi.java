@@ -1,16 +1,16 @@
-import javax.naming.InsufficientResourcesException;
 import  java.util.*;
 import  java.io.*;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
-public class Icici implements  Bank {
+
+public class Sbi implements Bank {
     private int account_number;
     private float rate;
     private float amount;
     private String firstName;
     private String lastName;
-    public Bank.account_type acc;
 
+    public Bank.account_type acc;
     public int getAccount_number(){
         return account_number;
     }
@@ -44,7 +44,6 @@ public class Icici implements  Bank {
 
     @Override
     public void getDetails() {
-
         Scanner obj = new Scanner(System.in);
         System.out.println("Enter account number: ");
         setAccount_number(obj.nextInt());
@@ -79,6 +78,7 @@ public class Icici implements  Bank {
         System.out.println("Amount  :" + getAmount());
         System.out.println("Rate   :" + getRate());
         System.out.println("Amount type   :" +  acc);
+
     }
 
     @Override
@@ -86,45 +86,55 @@ public class Icici implements  Bank {
         Scanner obj = new Scanner(System.in);
         System.out.println("Enter Amount to Transfer :");
         float amt = obj.nextFloat();
-
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        String ss= "Date : " +dtf.format(now)+ "; Account number :" + getAccount_number()+ "; Amount withdraw : " + amt +
+                "; Amount befor withdraw :" +getAmount()+ "; " ;
         if(getAmount() < amt){
             String t = "Transaction Ststus : Error ; Reason : Insufficient Balance ";
-            write_log(amt,t);
+
+            write_log(amt,ss+t);
             throw new InsufficientAmountException(" You dont have enough amount :");
 
         }
         else {
             String t ="Transaction status : Done ";
+
             setAmount(getAccount_number()-amt);
-            write_log(amt,t);
+            write_log(amt,ss+t);
         }
     }
 
     @Override
     public void write_log(float amt, String trans) {
         try {
-            FileWriter myWriter = new FileWriter("icici_log.txt");
-            DateTimeFormatter dtf = DateTimeFormatter.ofPattern(("yyy/MM/dd HH:mm:ss"));
-            LocalDateTime now = LocalDateTime.now();
-            String s = "Date :" + dtf.format(now) + "; Account number :" + getAccount_number() + "; Amount withdraw : " +
-                    amt + "Amount befor withdrawn :" + getAmount() + "; " + trans;
-            myWriter.write(s);
+            FileWriter myWriter =  new FileWriter("sbi_log.txt");
+System.out.println("aaa");
+System.out.println(trans);
+            myWriter.write(trans);
             myWriter.close();
-        }catch (IOException e){
-            System.out.println("An error occurred");
+
+        }
+        catch (IOException e){
+            System.out.println("An error occurred. ");
             e.printStackTrace();
+        }
 
     }
-}
-    public static void main(String[] args){
-        Icici obj = new Icici();
+
+
+    public static void main(String[] args) {
+
+        Sbi obj = new Sbi();
         obj.getDetails();
         obj.printDetails();
+        System.out.println("----Enter amount to transfer---------------------------");
         try{
             obj.transfer_money();
-        }catch (InsufficientAmountException e){
-            System.out.println(e);
+
+        }catch(InsufficientAmountException e){
+            System.out.println("Insufficient Amount ");
         }
+
     }
 }
-

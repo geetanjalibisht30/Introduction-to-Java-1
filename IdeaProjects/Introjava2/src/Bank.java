@@ -1,4 +1,3 @@
-import javax.naming.InsufficientResourcesException;
 
 public interface Bank {
     void  getDetails();
@@ -10,9 +9,5 @@ public interface Bank {
         SAVING
     }
 
-    class InsufficientAmountException extends Exception {
-        public InsufficientAmountException(String s){
 
-        }
-    }
 }
