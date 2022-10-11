@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="13f531b9-01b8-4aa5-b74f-b5b6711727ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/README.MD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/src/main/java/com/demo/domain/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/src/main/java/com/demo/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/src/main/java/com/demo/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/src/main/java/com/demo/service/TestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/src/test/java/com/demo/service/EmailServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/src/test/java/com/demo/service/OrderServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unit-testing-master/src/test/java/com/demo/service/TestServiceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2Fzvb1pabswxk0PK1fuJCqmbjMD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/geetanjali/Downloads/JUNIT-master"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13f531b9-01b8-4aa5-b74f-b5b6711727ee" name="Changes" comment="" />
+      <created>1665507794222</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665507794222</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
