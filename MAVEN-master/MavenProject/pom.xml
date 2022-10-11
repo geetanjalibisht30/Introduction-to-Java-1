@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.TTN</groupId>
+    <artifactId>MavenProject</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>SharedClass</module>
+        <module>ConsoleConsole</module>
+        <module>DesktopClass</module>
+    </modules>
+
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Central Maven Repository</name>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!-- Build an executable JAR -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>org.TTN.TestClass</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+  <!-- TEST DEPENDENCY
+    A test -scoped dependency is a dependency
+    that is available on the classpath only during test compilation and test execution.-->
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+      <!-- COMPLILE TIME
+      compile This is the default scope, used if none is specified. Compile dependencies are available in
+      all classpaths of a project. Furthermore, those dependencies are propagated to dependent projects.
+      provided This is much like compile, but indicates you expect the JDK or a container to provide the dependency at runtime.
+
+      -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.3.23</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- RUNTIME
+         This scope indicates that the dependency is not required for compilation,
+         but is for execution. It is in the runtime and test classpaths, but not the compile classpath.
+        -->
+
+        <!-- TRANSITIVE DEPENDENCIES
+        These are dependencies that are dependencies of your direct dependencies.
+As an example, if we added JUnit as a dependency in pom.xml under <dependencies> tag.
+It will download the other hamcrest-core-1.3.jar file and it is under Maven Dependencies,
+ This .jar file can be called Transitive dependency.
+        -->
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.3.23</version>
+            <scope>transitive</scope>
+        </dependency>
+
+
+
+
+
+
+    </dependencies>
+
+</project>
